@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>3</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>0</y>
+      <w>423</w>
+      <h>174</h>
+    </coordinates>
+    <panel_attributes>com.cabmanagementsystem.entity::TripBooking
+--
+-tripBookingId: Integer
+-customer: //@JsonIgnore&#13;
+Customer
+-cabType: CabType
+-pickupLocation: String
+-dropoffLocation: String
+-startDateTime: LocalDateTime
+-bookingStatus: BookingStatus
+-distanceInKm: Double
+-bill: Double
+--
++TripBooking(): ctor
++TripBooking(Integer tripBookingId, Customer customer, CabType cabType, String pickupLocation, String dropoffLocation, LocalDateTime startDateTime, BookingStatus bookingStatus, Double distanceInKm, Double bill): ctor
++getTripBookingId(): Integer
++setTripBookingId(Integer tripBookingId): void
++getCustomer(): Customer
++setCustomer(Customer customer): void
++getCabType(): CabType
++setCabType(CabType cabType): void
++getPickupLocation(): String
++setPickupLocation(String pickupLocation): void
++getDropoffLocation(): String
++setDropoffLocation(String dropoffLocation): void
++getStartDateTime(): LocalDateTime
++setStartDateTime(LocalDateTime startDateTime): void
++getBookingStatus(): BookingStatus
++setBookingStatus(BookingStatus bookingStatus): void
++getDistanceInKm(): Double
++setDistanceInKm(Double distanceInKm): void
++getBill(): Double
++setBill(Double bill): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>642</x>
+      <y>0</y>
+      <w>363</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>com.cabmanagementsystem.entity::Ride
+--
+-rideId: Integer
+-customer: Customer
+-cab: Cab
+-driver: Driver
+-pickupLocation: String
+-dropoffLocation: String
+-startTime: LocalDateTime
+-endTime: LocalDateTime
+-rideStatus: RideStatus
+--
++Ride(): ctor
++Ride(Integer rideId, Customer customer, Cab cab, Driver driver, String pickupLocation, String dropoffLocation, LocalDateTime startTime, LocalDateTime endTime, RideStatus rideStatus): ctor
++getRideId(): Integer
++setRideId(Integer rideId): void
++getCustomer(): Customer
++setCustomer(Customer customer): void
++getCab(): Cab
++setCab(Cab cab): void
++getDriver(): Driver
++setDriver(Driver driver): void
++getPickupLocation(): String
++setPickupLocation(String pickupLocation): void
++getDropoffLocation(): String
++setDropoffLocation(String dropoffLocation): void
++getStartTime(): LocalDateTime
++setStartTime(LocalDateTime startTime): void
++getEndTime(): LocalDateTime
++setEndTime(LocalDateTime endTime): void
++getRideStatus(): RideStatus
++setRideStatus(RideStatus rideStatus): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>177</y>
+      <w>273</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>/com.cabmanagementsystem.entity::User/
+--
+-userId: Integer
+-userName: String
+-password: String
+-address: String
+-mobileNumber: String
+-email: String
+-roles: String
+-logoutMsg: String
+--
++User(): ctor
++User(Integer userId, String userName, String password, String address, String mobileNumber, String email, String roles, String logoutMsg): ctor
++getUserId(): Integer
++setUserId(Integer userId): void
++getLogoutMsg(): String
++setLogoutMsg(String logoutMsg): void
++getUserName(): String
++setUserName(String userName): void
++getPassword(): String
++setPassword(String password): void
++getAddress(): String
++setAddress(String address): void
++getMobileNumber(): String
++setMobileNumber(String mobileNumber): void
++getEmail(): String
++setEmail(String email): void
++getRoles(): String
++setRoles(String roles): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>492</x>
+      <y>177</y>
+      <w>276</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>com.cabmanagementsystem.entity::Cab
+--
+-cabId: Integer
+-cabType: CabType
+-driver: //@JsonIgnore&#13;
+Driver
+-ratePerKm: Double
+-registrationNo: String
+-cabAvailability: String
+-currentLocation: String
+--
++Cab(): ctor
++Cab(Integer cabId, CabType cabType, Driver driver, Double ratePerKm, String registrationNo, String cabAvailability, String currentLocation): ctor
++getCabId(): Integer
++setCabId(Integer cabId): void
++getCabType(): CabType
++setCabType(CabType cabType): void
++getDriver(): Driver
++setDriver(Driver driver): void
++getRatePerKm(): Double
++setRatePerKm(Double ratePerKm): void
++getRegistrationNo(): String
++setRegistrationNo(String registrationNo): void
++getCabAvailability(): String
++setCabAvailability(String cabAvailability): void
++getCurrentLocation(): String
++setCurrentLocation(String currentLocation): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>336</y>
+      <w>96</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>com.cabmanagementsystem.entity::Customer
+--
+-customerName: String
+--
++Customer(): ctor
++Customer(String customerName): ctor
++getCustomerName(): String
++setCustomerName(String customerName): void
++toString(): String
++setLoggedIn(boolean b): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>336</y>
+      <w>84</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>com.cabmanagementsystem.entity::Admin
+--
+-adminName: String
+--
++Admin(): ctor
++Admin(String adminName): ctor
++getAdminName(): String
++setAdminName(String adminName): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>777</x>
+      <y>183</y>
+      <w>144</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>com.cabmanagementsystem.entity::Driver
+--
+-driverName: String
+-licenseNo: String
+-driverAvailability: String
+--
++Driver(): ctor
++Driver(String driverName, String licenseNo, String driverAvailability): ctor
++getDriverName(): String
++setDriverName(String driverName): void
++getLicenseNo(): String
++setLicenseNo(String licenseNo): void
++getDriverAvailability(): String
++setDriverAvailability(String driverAvailability): void
++toString(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
